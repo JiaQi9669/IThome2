@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.zqrc.ITHome.homes.talks.vo.Replys" table="replys" lazy="false">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="message" type="string"></property>
+        <property name="dates" type="date"></property>
+
+		<many-to-one name="friend" lazy="false" fetch="select" class="com.zqrc.ITHome.publics.login.vo.Friends" column="reply_friends"></many-to-one>
+
+		<many-to-one name="post" lazy="false" fetch="select" class="com.zqrc.ITHome.homes.talks.vo.Posts" column="reply_post"></many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,102 @@
+/*样式重置*/
+body,h1,h2,h3,h4,h5,h6,p,dl,dd,ul,ol,form,input,textarea,th,td,select{margin:0;padding:0;}
+em{font-style:normal;}
+li{list-style:none;}
+a{text-decoration:none;}
+img{border:none;vertical-align:top;}
+table{border-collapse:collapse;}
+input,textarea{outline:none;}
+textarea{resize:none;overflow:auto;}
+body{font-size:12px;font-family:"微软雅黑";width: 100%;height: 100%;}
+
+/*end 样式重置*/
+/*public*/
+.gradient{
+    background:-webkit-linear-gradient(top,#464547,#0BF);
+    background:-moz-linear-gradient(top,#464547,#0BF);
+    background:-ms-linear-gradient(top,#464547,#0BF);
+    background:linear-gradient(top,#464547,#0BF);
+    -ms-filter:"progid:DXlmage Transform.Microsoft.gradient(GradientType=0,startColorstr=#464547,endColorstr=#0BF)";
+    	+background:#464547;
+}
+.border{
+	box-sizing:border-box;
+	-moz-box-sizing:border-box; /* Firefox */
+	-webkit-box-sizing:border-box; /* Safari */
+}
+.clear{zoom:1;}
+.clear:after{content:"";display:block;clear:both;}
+.fl{float:left;}
+.fr{float:right;}
+::selection{background: #0BF;color: white;}
+::-moz-selection{background: orange;color: white;}
+/*end public*/
+
+/*head*/
+#header{
+	position: fixed;
+	top: 0;
+	width:100%;
+	/*height:50px;*/
+    background-color: #464547;
+	z-index: 10086;
+	border:none;
+	border-radius:0;
+}
+#header .Tl{width: 50px;height: 50px;padding:0;margin-left: 15px;color: #f2eada;font-size: 18px;;line-height:1.42857143;cursor: default;}
+#header .Tl:hover{color: #0BF;}
+#header a{
+	height: 50px;
+	width: 135px;
+	padding: 0;
+	/*box-sizing: border-box;
+	float: left;
+	display: block;*/
+	text-align: center;
+	line-height: 50px;
+	color:#f2eada;
+	font-size: 22px;
+}
+@media (max-width: 767px) {
+	#header a{
+		width: 100%;
+	}
+}
+.nav_active{background-color: rgba(0,188,255,0.6);border-bottom: 3px solid #0BF;}
+#header a:hover{background-color: rgba(0,188,255,0.6);text-decoration: none;}
+#header,#header .Tl,#header a{transition: .5s;-ms-transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;}
+
+/*end head*/
+/*foot*/
+#footer{
+	position: relative;
+	margin: 0 auto;
+	padding: 20px 0 10px;
+	background: #f6f5ec;
+}
+#footer .Nav{
+	width: 800px;
+	margin: 0 auto;
+	font-size:20px;
+	text-align: center;
+}
+#footer .Nav a{
+	padding: 20px 50px;
+	width: 120px;
+	color:#787d82;
+	font-size: 20px;
+}
+#footer #xian{
+	width: 900px;
+	height: 10px;
+	margin: 10px auto;
+	border-bottom: 1px solid gainsboro;
+}
+#footer .Nav a:hover{color:#0BF;text-decoration: none;}
+#footer p{
+	text-align: center;
+	margin:30px auto 0;
+	font-size: 15px;
+	color:#787d82;
+}
+/*end foot*/

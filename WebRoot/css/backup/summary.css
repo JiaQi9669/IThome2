@@ -1,0 +1,278 @@
+	body,h1,h2,h3,h4,h5,p,dl,dd,ul,ol,form,input,textarea,th,td,select {
+	margin: 0;
+	padding: 0;
+}
+
+em {
+	font-style: normal;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+input,textarea {
+	outline: none;
+}
+body{
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+textarea {
+	resize: none;
+	overflow: auto;
+}
+.clear {
+	zoom: 1;
+	/*设置或检索对象的缩放比例。*/
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.gradient {
+	background: -webkit-linear-gradient(top, #FFFFFF, #f8f8f8);
+	/*一般浏览器*/
+	background: -moz-linear-gradient(top, #FFFFFF, #f8f8f8);
+	/*火狐*/
+	background: -ms-linear-gradient(top, #FFFFFF, #f8f8f8);
+	/*ie10浏览器*/
+	background: linear-gradient(top,#FFFFFF, #f8f8f8);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFFFFF,endColorstr=#f8f8f8)";
+	                    +background: #f9f9f9;
+	/*滤镜*/
+}
+/*
+ * 初始样式，所有标签样式为无，公共化代码
+ */
+body{
+	min-height: 600px;
+	min-width: 1586px;
+}
+#header{
+	position: fixed;
+	top: 0;
+	width:100%;
+	height:60px;
+    background-color: black;
+    opacity: 0.4;
+	z-index: 10086;
+	box-shadow: 0 0 2px 2px #666;
+}
+#header ul{
+	position: absolute;
+	top: 10px;
+	right: 0;
+}
+#header li{
+	float: left;
+}
+#header li a{
+	display: block;
+	padding-top:5px;
+	padding-left:60px ;
+	width: 115px;
+	color:white;
+	font-size: 25px;
+}
+#header li a:hover{
+	color: chocolate;
+}
+#bottom{
+	position: relative;
+	margin: 60px auto;
+	width: 1400px;
+	height: 900px;
+}
+.left{
+	float: left;
+	margin: 30px 0 0 0;
+	width: 300px;
+	height: 850px;
+}
+.left_view{
+	float: left;
+	margin:30px 0 0 28px;
+	width: 240px;
+	height: 180px;
+}
+.left img{
+	width: 240px;
+	height: 180px;
+}
+.left_message{
+	float: left;
+	margin:20px 0 0 28px;
+	width: 240px;
+	height: 530px;
+}
+.left_message p{
+    font-size: 13px;
+    text-indent: 2em;
+    color: #787d82;
+}
+.xian{
+	margin-top: 10px;
+	width:220px;
+	height: 20px;
+	border-top: 1px solid black;
+}
+.right{
+	float: left;
+	margin: 30px 0 0 80px;
+	width: 1000px;
+	height: 850px;
+}
+.right_section{
+	float: left;
+	margin: 20px 0 0 60px;
+	width: 1200px;
+	height: 180px;
+}
+.view{
+	float: left;
+	margin:20px 0 0 10px ;
+	width: 240px;
+	height:180px;
+}
+.message{
+	float: left;
+	height: 180px;
+	width: 600px;
+	margin: 20px 0 0 40px;
+}
+.message p{
+	font-size: 15px;
+	text-indent: 2em;
+}
+#Bottom{
+	margin:80px 0 0 50px;
+	font-size: 15px;
+}
+#Bottom .High{
+	margin-top:100px;
+}
+#Bottom a{
+	color:black;
+}
+#Bottom a:hover{
+	color:gray;
+}
+#Inform{
+	margin: 40px 0 0 200px;
+}
+#Inform h1{
+	font-size: 25px;
+}
+#Inform ul{
+	margin-top:30px;
+}
+#Inform li{
+	list-style: none;
+	line-height: 40px;
+	font-size: 20px;
+}
+#Inform li:hover{
+	color: rosybrown;
+}
+#Link{
+	margin:80px 0 0 300px;
+}
+#Link .lnk h1{
+	font-size:20px;
+	line-height:40px;
+	border-bottom: 1px solid #eceff0;
+}
+#Link dl{
+	margin: 50px;
+	width: 310px;	
+}
+.xian1{
+	margin-top: 20px;
+	width:600px;
+	border-bottom: 1px solid #eceff0;
+}
+#Link dd{
+	font-size: 25px;
+	line-height: 35px;
+	width: 110px;
+	float: left;
+}
+#Link .lnk a{
+	color: black;
+	font-size: 15px;
+}
+#Link .lnk a:hover{
+	color: chocolate;
+}
+#footer{
+	position: relative;
+	width: 1400px;
+	height:70px;
+	margin:0 auto;
+}
+#footer .Nav{
+	width: 600px;
+	height:30px;
+	margin: 0 auto;
+	font-size:20px;
+}
+#footer .Nav ul{
+	padding-left: 105px;
+}
+#footer .Nav li{
+	float: left;
+	margin: 10px auto;
+}
+#footer .Nav li a{
+	padding-top: 30px;
+	padding-right:70px ;
+	width: 120px;
+	color:gray;
+	font-size: 20px;
+}
+#footer #xian{
+	width: 900px;
+	height: 10px;
+	margin: 10px auto;
+	border-bottom: 1px solid gainsboro;
+}
+#footer .Nav li a:hover{
+	color:burlywood;
+}
+#footer p{
+	text-align: center;
+	margin:30px auto;
+	font-size: 15px;
+	color:gray;
+}
+#X{
+	float: left;
+	width: 400px;
+	margin: 49px 0 0 380px;
+	border: 1px solid gainsboro;
+}

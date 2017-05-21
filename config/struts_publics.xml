@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"/struts-2.3.dtd">
+
+<struts>
+	<!--展示区Struts配置 -->
+	<package name="publics" extends="struts-default" namespace="/">
+
+		<!--全局操作 -->
+		<global-results>
+			<result name="index">/WEB-INF/publics/main.jsp</result>
+			<result name="input">/error.jsp</result>
+			<result name="exc">/error.jsp</result>
+		</global-results>
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception" result="exc" /> 
+		</global-exception-mappings>
+
+		<!--前台视图 -->
+		<action name="view*" class="indexAction" method="{1}">
+			<result name="index">/WEB-INF/publics/main.jsp</result>
+			<result name="lab">/WEB-INF/publics/lab.jsp</result>
+			<result name="us">/WEB-INF/publics/us.jsp</result>
+			<result name="join">/WEB-INF/publics/join.jsp</result>
+			<result name="login">/WEB-INF/publics/login.jsp</result>
+			<result name="contact">/WEB-INF/publics/contact.jsp</result>
+		</action>
+
+		<!--招新报名 -->
+		<action name="apply*" class="applyAction" method="{1}">
+			<!--上传图片拦截器 -->
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,jpeg</param>
+			</interceptor-ref>
+
+			<result name="view">/WEB-INF/homes/admin/join_view.jsp</result>
+			<result name="list">/WEB-INF/homes/admin/apply.jsp</result>
+			<result name="add">/WEB-INF/publics/success.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+
+		<!--实验室活动信息 -->
+		<action name="lab*" class="labAction" method="{1}">
+			<!--上传图片拦截器 -->
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,jpeg,txt,doc,docx</param>
+			</interceptor-ref>
+			<result name="view">/WEB-INF/publics/us.jsp</result>
+			<result name="input">/test/view.jsp</result>
+
+			<!-- 跳转到历史界面与添加历史界面-王志汤 -->
+			<result name="adhistory">/WEB-INF/homes/admin/manage_history.jsp</result>
+			<result name="addhistory">/WEB-INF/homes/admin/add_history.jsp</result>
+			<result name="addhistorysu">/WEB-INF/homes/admin/manage_history.jsp</result>
+			<result name="delhistory">/WEB-INF/homes/admin/manage_history.jsp</result>
+		</action>
+
+		<!--功能测试****************************************************** -->
+		<action name="index_*" class="TestViewAction" method="{1}">
+			<!--测试首页 -->
+			<result name="index">/Test.jsp</result>
+
+			<result name="all">/testView.jsp</result>
+
+			<result name="view">/test/view.jsp</result>
+			<result name="apply">/test/apply.jsp</result>
+			<result name="login">/test/login.jsp</result>
+			<result name="data">/test/data.jsp</result>
+			<result name="talk">/test/talk.jsp</result>
+			<result name="project">/test/project.jsp</result>
+			<result name="admin">/test/admin.jsp</result>
+			<result name="input">/error.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>

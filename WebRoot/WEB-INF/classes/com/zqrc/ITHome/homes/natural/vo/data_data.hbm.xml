@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!--图片映射 -->
+	<class name="com.zqrc.ITHome.homes.natural.vo.data_data" table="data_data">
+		<!--主键 -->
+		<id name="id" column="Id" type="integer">
+			<generator class="native"></generator>
+		</id>
+		<!--普通属性 -->
+		<property name="name" type="string"></property>
+		<property name="message" type="string"></property>
+		<property name="dates" type="date"></property>
+		<property name="url_data" type="string"></property> 
+		<property name="friends" type="string"></property>
+		<property name="down_num" type="integer"></property>
+		<many-to-one name="data_class" lazy="false" class="com.zqrc.ITHome.homes.natural.vo.data_class" column="data_id"></many-to-one>
+		
+	</class>
+
+</hibernate-mapping>

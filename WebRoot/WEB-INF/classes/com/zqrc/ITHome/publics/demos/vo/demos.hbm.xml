@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	
+	<class name="com.zqrc.ITHome.publics.demos.vo.demos" table="demos">
+		
+		<!-- 主键 ，映射-->
+		<id name="Id" column="id">
+			<!--自增长  -->
+			<generator class="native"/>
+			<!-- assigned  指定主键生成策略为手动指定主键的值 -->
+		</id>
+		
+		<!-- 非主键，映射 -->
+		<property name="name" column="name" ></property>
+		<property name="pass" column="pass"></property>
+		<property name="message" column="message"></property>
+		
+	</class>
+
+</hibernate-mapping>

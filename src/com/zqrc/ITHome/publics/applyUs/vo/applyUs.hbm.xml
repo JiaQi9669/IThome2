@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<!--图片映射  -->
+	<class name="com.zqrc.ITHome.publics.applyUs.vo.ApplyUs" table="applyus">
+		<!--主键  -->
+		<id name="id" column="Id">
+			<generator class="native"></generator>
+		</id>
+		<!--普通属性  -->
+		<property name="stuName" type="string"></property>
+		<property name="stuBorn" type="string"></property>
+		<property name="stuSex" type="string"></property>
+		<property name="dates" type="string"></property>
+		<property name="stuAboutSelf" type="string"></property>
+		<property name="stuClass" type="string"></property>
+		<property name="stuGoodAt" type="string"></property>
+		<property name="stuID" type="string"></property>
+		<property name="stuJoinParty" type="string"></property>
+		<property name="stuQq" type="string"></property>
+		<property name="stuPhone" type="string"></property>
+		<property name="stuSleepRoom" type="string"></property>
+		<property name="applytype" type="string"></property>
+		<property name="picture" type="string"></property>
+		<property name="stuAboutFuture" type="string"></property>
+		
+		<property name="stuaddr" type="string"></property>
+		<property name="stuemail" type="string"></property>
+		<property name="aboutlab" type="string"></property>
+		<property name="personHobby" type="string"></property>
+		
+	</class>
+
+</hibernate-mapping>
+
+
+

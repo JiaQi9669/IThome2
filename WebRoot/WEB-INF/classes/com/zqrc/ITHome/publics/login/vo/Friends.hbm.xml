@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!--图片映射 -->
+	<class name="com.zqrc.ITHome.publics.login.vo.Friends" table="friends" lazy="false">
+		<!--主键 -->
+		<id name="id" column="Id" type="integer">
+			<generator class="native"></generator>
+		</id>
+		<!--普通属性 -->
+		<property name="realName" type="string"></property>
+		<property name="pickName" type="string"></property>
+		<property name="pass" type="string"></property>
+		<property name="leaves" type="string"></property> 
+		<property name="myCase" type="string"></property>
+		<property name="role_p" type="string"></property>
+		<property name="say" type="string"></property>
+		<property name="picture" type="string"></property>
+		<property name="accounts" type="string"></property>
+		
+		<set name="posts" lazy="false" cascade="all" inverse="true" >
+            <key>
+                <column name="post_friends" />
+            </key>
+            <one-to-many class="com.zqrc.ITHome.homes.talks.vo.Posts" />
+        </set>
+        
+        <set name="replys" lazy="false" cascade="all" inverse="true" >
+            <key>
+                <column name="reply_friends" />
+            </key>
+            <one-to-many class="com.zqrc.ITHome.homes.talks.vo.Replys" />
+        </set>
+        
+        <set name="projects" inverse="true" cascade="all" lazy="false">
+			<!--对应属性 key自定义 -->
+			<key column="pro_friend"></key>
+			<one-to-many class="com.zqrc.ITHome.homes.develop.vo.Projects"/>
+		</set>
+		
+		<set name="packages" inverse="true" cascade="all" lazy="false">
+			<!--对应属性 key自定义 -->
+			<key column="pack_fri"></key>
+			<one-to-many class="com.zqrc.ITHome.homes.develop.vo.Packages"/>
+		</set>
+		
+		<set name="files" inverse="true" lazy="false">
+			<!--对应属性 key自定义 -->
+			<key column="file_fri"></key>
+			<one-to-many class="com.zqrc.ITHome.homes.develop.vo.Files"/>
+		</set>
+		
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>加入</title>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" href="../css/Join.css" />
+		<!-- Bootstrap -->
+	    <link href="../css/bootstrap.min.css" rel="stylesheet">
+	
+	    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	    <!--[if lt IE 9]>
+	      <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	      <script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+	    <![endif]-->
+	    	
+	</head>
+	<body>
+		<div id="header" class="clear navbar navbar-default" role="navigation">
+			<div class="navbar-header">
+				<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+					 <span class="sr-only">Toggle Navigation</span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+					 <span class="icon-bar"></span>
+				</button>
+				<div class="Tl navbar-brand">郑轻<br>&nbsp;&nbsp;软创</div>
+			</div>
+			<div class="collapse navbar-collapse navbar-responsive-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="main.html">首页</a></li>
+					<li><a href="SysIntroduce.html">介绍</a></li>
+					<li><a href="Us.html">动态</a></li>
+					<li><a class="nav_active" href="Join.html">招新</a></li>
+					<li><a href="login.html">基地</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="body">
+			<div id="tip">
+				<h1>报名须知</h1>
+				<h2>一、关于我们</h2>
+				<p>郑州轻工业学院软件综合实践与创新基地是隶属于郑州轻工学院工程训练中心的一个以软件学科教学辅助与软件储备人才培养为主要任务的创新型、实践型的校级软件学科实验室。下设郑轻软创团队和软件学科新生集训队。</p>
+				<p>在过去的一年中团队曾代表学校参加软件学科各类竞赛，为学校和学院取得诸多荣誉。其中省级奖项三十余项，国级奖项五项，为学校开发和投用多套OA系统，在本校软件方面具有较大影响力。</p>
+				<p>近两年，出自本实验室的毕业生，多被京东、群硕等知名公司录取......</p>
+				<h2>二、招新对象</h2>
+				<p>本次招新工作面向郑州轻工业学院软件学院 16 级全体学生。</p>
+				<h2>三、招新要求</h2>
+				<p>1.　自觉遵守创新基地各项规章制度。</p>
+				<p>2.　具有较强责任心，细心耐心且具备较好沟通能力。</p>
+				<p>3.　热爱编程、谦逊好学、具有一定的自学能力。</p>
+				<p>4.　具有团队合作精神。</p>
+				<p>5.　具有编程基础、美工基础者优先。</p>
+				<p>6.　想成为、要成为软件大牛的同学。</p>
+				<h2>四、成员待遇</h2>
+				<p>凡通过本实验室选拔的同学，将获得实验室成员的标准配置，并获得专属的学长学姐进行技术指导。最终成为实验室编制内成员，做牛X的程序员，做高大上的软件，代表学校到全国各地参加各种软件学科类竞赛......</p>
+				<p class="more">了解详情请加QQ群：<strong>572272821</strong></p>
+			</div>
+			<div id="apply">
+				<form id="Info" name="Info" action="" method="post">
+					<h1>招新报名表</h1>
+					<div class="clear" id="wrap">
+						<div class="file-box fl">
+							<img id="file_img" src="../img/default.jpg">
+							<input type="file"  name="fileField" class="file" id="fileField" size="28" onchange="previewImage(this)"/>
+						</div>
+						<div class="file-head fl">
+							<div class="picshort">
+								<label class="labelt" for="name">姓　　名：</label>
+								<input type="text" class="my_ipt" id="name" />
+								<span class="publicSp" id="public1">不能为空！</span>
+							</div>
+							<div class="picshort">
+								<label class="labelt" for="sex">性　　别：</label>
+								<input type="text" class="my_ipt" id="sex" />
+								<span class="publicSp" id="public2">不能为空！</span>
+							</div>
+							<div class="picshort">
+								<label class="labelt" for="room">寝　　室：</label>
+								<input type="text" class="my_ipt" id="room" />
+								<span class="publicSp" id="public3">不能为空！</span>
+							</div>
+						</div>
+						<div class="info_right fr">
+							<label class="labelc" for="personHobby_1">
+								<input type="checkbox" class="labelc_checkbox"  name="personHobby" value="1" id="personHobby_1"/>
+			        			<span>Java</span>
+							</label><label class="labelc" for="personHobby_2">
+								<input type="checkbox" class="labelc_checkbox" name="personHobby" value="2" id="personHobby_2"/>
+			        			<span>Web</span>
+							</label><label class="labelc" for="personHobby_3">
+								<input type="checkbox" class="labelc_checkbox" name="personHobby" value="3" id="personHobby_3"/>
+		        				<span>PHP</span>
+							</label><label class="labelc" for="personHobby_4">
+								<input type="checkbox" class="labelc_checkbox" name="personHobby" value="4" id="personHobby_4"/>
+			        			<span>C</span>
+							</label><label class="labelc" for="personHobby_5">
+								<input type="checkbox" class="labelc_checkbox" name="personHobby" value="5" id="personHobby_5"/>
+			        			<span>C#</span>
+							</label><label class="labelc" for="personHobby_6">
+								<input type="checkbox" class="labelc_checkbox" name="personHobby" value="6" id="personHobby_6"/>
+			        			<span>C++</span>
+							</label><label class="labelc" for="personHobby_7">
+								<input type="checkbox" class="labelc_checkbox" name="personHobby" value="7" id="personHobby_7"/>
+			        			<span>Android</span>
+							</label><label class="labelc" for="personHobby_8">
+								<input type="checkbox" class="labelc_checkbox" name="personHobby" value="8" id="personHobby_8"/>
+			        			<span>PS</span>
+							</label><label class="labelc" for="personHobby_9">
+								<input type="checkbox" class="labelc_checkbox" name="personHobby" value="9" id="personHobby_9"/>
+			        			<span>UI设计</span>
+							</label>
+						</div>
+					</div>
+					<div class="short">
+						<label class="labelt" for="add">籍　　贯：</label>
+						<input type="text" class="my_ipt" id="add" />
+						<label class="labelt" for="born">出生日期：</label>
+						<input type="text" class="my_ipt" id="born" />
+					</div>
+					<div class="short">
+						<label class="labelt" for="id">学　　号：</label>
+						<input type="text" class="my_ipt" id="id" />
+						<label class="labelt" for="class">专业班级：</label>
+						<input type="text" class="my_ipt" id="class" />
+					</div>
+					<div class="short">
+						<label class="labelt" for="tel">手机号码：</label>
+						<input type="text" class="my_ipt" id="tel" />
+						<label class="labelt" for="qq">ＱＱ号码：</label>
+						<input type="text" class="my_ipt" id="qq" />
+					</div>
+					<div class="short">
+						<label class="labelt" for="emile">邮　　箱：</label>
+						<input type="text" class="my_ipt" id="emile" />
+						<span class="publicSp" id="public4">不能为空！</span>
+					</div>
+					<div class="long">
+						<label class="labelt" for="spec">有哪些特长：</label>
+						<input type="text" class="my_ipt" id="spec" />
+					</div>
+					<div class="long">
+						<label class="labelt" for="assn">加入的社团：</label>
+						<input type="text" class="my_ipt" id="assn" />
+					</div>
+					<hr />
+					<div class="short">
+						<textarea class="my_texta" placeholder="介绍一下自己吧："></textarea>
+					</div>
+					<div class="long">
+						<label class="labelt" for="ans2">加入实验室的原因、对实验室的理解：</label><br />
+						<textarea class="my_texta" id="ans2"></textarea>
+					</div>
+					<div class="long">
+						<label class="labelt" for="ans3">如果你进入实验室你会如何规划在大学生活：</label><br />
+						<textarea class="my_texta" id="ans3"></textarea>
+					</div>
+					<hr />
+					<div class="long">
+						<input type="submit" id="submit_btn" class="my_btn" id="enter" onClick="return check()" value="保存信息"/>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="Nav">
+				<a href="../Html/contact.html">联系我们</a>
+		 		<a href="https://www.baidu.com/" target="_blank">常见问题</a>
+			</div>
+			<div id="xian"></div>
+			<p>地址：河南省郑州市高新区科学大道166号 邮编：450000</p>
+			<p>@2016&nbsp;郑州轻工业学院-郑轻软创基地</p>
+		</div>
+		<script type="text/javascript" src="../js/jquery-1.12.4.min.js" ></script>
+		<script type="text/javascript" src="../js/Join.js" ></script>
+		<script src="../js/bootstrap.min.js"></script>
+	</body>
+</html>

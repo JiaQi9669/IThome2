@@ -1,0 +1,107 @@
+
+body{min-height: 600px;width: 100%;min-width: 980px;background-color: #f6f5ec !important;}
+
+/*Timer*/
+.tip{
+	padding-top: 50px;
+	background:rgba(0,188,255,0.1);
+	text-align: center;
+}
+.tip .list1{margin:0;padding: 20px 0;}
+.tip .list1 dt{font-size: 16px;color: #0BF;line-height: 24px;}
+.tip .list1 dd{font-size: 14px;color: #787d82;text-indent: 2em;}
+
+
+.us_container{
+	position: relative;
+	width: 1024px;
+	margin: 0 auto;
+	padding: 50px 0 100px 100px;
+}
+.us_scrubber{
+	width: 50px;
+	min-height: 200px;
+	position: fixed;
+	top: 40%;
+	left: 10%;
+	z-index: 999;
+}
+@media (max-width: 1600px) {.us_scrubber{left: 5%;}}
+@media (max-width: 1152px) {.us_scrubber{left: 0;}}
+.us_scrubber a{
+	height: 26px;
+	line-height: 26px;
+	font-size: 16px;
+	border-right: 2px solid rgba(0,188,255,0.2);
+	padding-right: 5px;
+	color: #787d82;
+	text-decoration: none;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	text-align: right;
+}
+.us_scrubber a:hover,.us_scrubber a.current{border-right-color: #0BF;color: #14191e;font-weight: bold;}
+.us_scrubber a:hover{text-decoration: underline;}
+.us_scrubber a.current:hover{text-decoration: none;}
+.scrubber_year{display: block;}
+.scrubber_month{display: none;}
+
+.us_content{
+	min-height: 1000px;
+	background: url(../img/spine.png)repeat-y;
+	position: relative;
+}
+.content_year,.content_month{
+ height: 30px;
+ line-height: 30px;
+ color: #464547;
+ text-shadow: 0 1px 1px rgba(0,0,0,.3);
+ font-weight: bold;
+ font-size: 16px;
+ position: relative;
+ left: -50px;
+ clear: both;				
+}
+.content_item{
+	position: relative;
+	top:0;
+	left: 30px;
+	width: 270px;
+	background: #464547;
+	border-radius: 10px;
+	margin: 40px 30px 40px 0;
+	color: #f2eada;
+	display: inline-block;
+	*display:inline;
+	*zoom:1
+}
+.content_item_head{
+	display: block;
+	
+	padding: 15px;
+	font-size: 16px;
+	line-height: 22px;
+	text-indent: 2em;
+}
+.content_item_media{display:block;width: 180px;height: 180px;margin:-60px auto 0;border: 2px solid #0BF;border-radius: 50%;}
+
+/**/
+.content_item_icon_arrow{
+	position: absolute;
+	height: 0px;
+	left: -11px;
+	top: 20px;
+	border-color: transparent #0BF transparent transparent;
+	border-width: 10px 10px 10px 0px;/*三角形朝向的那个方向设为0px*/
+	border-style: dashed solid dashed dashed;
+}
+.content_item_icon_dot{
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background: #0BF;
+	position: absolute;
+	left: -44px;
+	top: 25px ;
+	box-shadow: 0 0 6px 2px #0BF;
+}
+/**/

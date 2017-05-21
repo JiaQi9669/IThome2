@@ -1,0 +1,272 @@
+body,h1,h2,h3,h4,h5,p,dl,dd,ul,ol,form,input,textarea,th,td,select {
+	margin: 0;
+	padding: 0;
+}
+
+em {
+	font-style: normal;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	border: none;
+	vertical-align: top;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+input,textarea {
+	outline: none;
+}
+body{
+	font-size: 12px;
+	font-family: "微软雅黑";
+}
+textarea {
+	resize: none;
+	overflow: auto;
+}
+.clear {
+	zoom: 1;
+	/*设置或检索对象的缩放比例。*/
+}
+
+.clear:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.fl {
+	float: left;
+}
+
+.fr {
+	float: right;
+}
+
+.gradient {
+	background: -webkit-linear-gradient(top, #FFFFFF, #f8f8f8);
+	/*一般浏览器*/
+	background: -moz-linear-gradient(top, #FFFFFF, #f8f8f8);
+	/*火狐*/
+	background: -ms-linear-gradient(top, #FFFFFF, #f8f8f8);
+	/*ie10浏览器*/
+	background: linear-gradient(top,#FFFFFF, #f8f8f8);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFFFFF,endColorstr=#f8f8f8)";
+	                    +background: #f9f9f9;
+	/*滤镜*/
+}
+/*
+ * 初始样式，所有标签样式为无，公共化代码
+ */
+body{
+	min-height: 600px;
+	min-width: 1586px;
+}
+#header{
+	position: relative;
+	width: 100%;
+	height: 60px;
+	background-color: black;
+}
+.title{
+	margin-left:150px ;
+}
+#header .title li{
+	float: left;
+	line-height: 60px;
+}
+#header .title li a{
+	display: block;
+	padding-left:40px ;
+	width: 60px;
+	font-family: arial;
+	font-weight: bold;
+	color:white;
+	font-size: 15px;
+}
+#header .title li a:hover{
+	background-color:rgb(54,60,65);
+}
+#header .nav{
+	margin-right: 20px;
+}
+#header .nav li{
+	float: right;
+}
+#header .nav li a{
+	display: block;
+	padding-top: 30px;
+	padding-right:15px ;
+	width: 60px;
+	font-family: arial;
+	font-weight: bold;
+	color:grey;
+	font-size: 10px;
+}
+#header .nav li a:hover{
+	color:white;
+}
+#bottom{
+	position: relative;
+	width: 300px;
+	height: 800px;
+	font-size: 15px;
+	
+}
+.menu{
+	margin-left: 200px;
+	
+}
+#bottom h2{
+	text-align:center;
+}
+#bottom .xian{
+	margin:0 auto;
+	width: 200px;
+	height: 60px;
+	border-top: 1px solid black;
+}
+#bottom a{
+	color:grey;
+}
+#bottom a:hover{
+	color: black;
+}
+#footer{
+	position: relative;
+	width: 1400px;
+	height:50px;
+	margin: 0 auto;
+	background-color:black ;
+}
+#footer p{
+	align:center;
+	font-size: 10px;
+	color: white;
+}
+#menu_list{
+	margin: 10px 0 0 300px;
+	width: 100px;
+	height: 678px;
+	background-color: ;
+}
+.list{
+	width:400px ;
+	height:520px ;
+}
+#menu_list .xuan{
+	position: absolute;
+	top: 150px;
+	right:200px;
+}
+.list h1{
+	font-size: 25px;
+}
+.list dt{
+	color:black;
+	font-size: 20px;
+}
+.list1{
+font-size: 14px;
+line-height: 35px;
+color: #363d40;
+margin-bottom: 2.1em;
+border-bottom: 1px solid #eceff0;
+}
+.session{
+	line-height: 30px;
+}
+#connect{
+	margin: 10px 0 0 320px;
+	width:300px;
+}
+#connect ul{
+width: 700px;
+padding-bottom: 100px;
+margin-right: -60px;
+color: #60686b;
+}
+#connect h1{
+font-size: 20px;
+line-height: 35px;
+color: #363d40;
+margin-bottom: 2.1em;
+border-bottom: 1px solid #eceff0;
+}
+#connect .hi{
+	font-size: 25px;
+}
+#connect p{
+padding: 0 20px 32px;
+margin: 0;
+font-size: 12px;
+line-height: 20px;
+}
+#connect li{
+float: left;
+padding-bottom: 30px;
+width: 300px;
+margin-right: 170px;
+}
+.li_right{
+margin-right: 0;
+}
+#Title{
+	margin:50px 0 0 300px;
+	font-size: 20px;
+	
+}
+#Title p{
+	margin-top: 30px;
+}
+#Title #btn1{
+	opacity: 0.7;
+	border-radius: 6px;
+	background-color: ghostwhite;
+	margin:0 0 0 30px;
+	width: 50px;
+	height: 30px;
+}
+#Title input,select{
+	margin: 0 0 0 40px;
+}
+#Title #phone{
+	margin-left:-1px;
+}
+#Message{
+	margin: 50px 0 0 300px;
+	font-size: 20px;
+}
+#Message ul{
+	margin: 30px 0 0 0;
+}
+#Message h2{
+	font-size: 25px;
+}
+#Message li{
+	line-height: 50px;
+	padding-left:30px;
+	font-size: 15px;
+}
+#Message .kong{
+	padding-left:15px;
+	font-size: 18px;
+}
+#Wenti{
+	margin:50px 0 0 320px;
+	font-size: 15px;
+}
+#Wenti h2{
+	margin-top: 30px;
+}

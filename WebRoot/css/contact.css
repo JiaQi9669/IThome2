@@ -1,0 +1,12 @@
+body{min-height: 600px;min-width: 1024px;background-color: #f6f5ec !important;}
+
+.main_wrap{width:900px;margin: 100px auto;padding:50px;background: #FFF;}
+.main_wrap h1{display:block;margin:0;font-size: 26px;font-weight: bold;line-height:80px;text-indent:1em;border-bottom:1px solid #0BF ;}
+.main_wrap h3{display:block;margin:20px 0;font-size: 22px;font-weight: bold;text-indent:1em;color: #0BF;border-left:3px solid #0BF ;}
+.main_wrap h2{line-height:50px;font-size: 18px;font-weight: bold;text-indent:2em;}
+
+.main_wrap span{display:block;text-indent:2em;}
+.main_wrap em,.main_wrap p{font-size: 16px;line-height:50px;}
+.main_wrap em{width:150px;}
+.main_wrap p{width:300px;}
+.main_wrap strong{font-weight: normal;color: #0BF;}

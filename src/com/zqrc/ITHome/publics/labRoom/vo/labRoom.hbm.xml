@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!--实验室活动介绍  -->
+	<class name="com.zqrc.ITHome.publics.labRoom.vo.labRoom" table="viewitem">
+		
+		<!-- 主键 ，映射-->
+		<id name="id" type="integer" column="id">
+			<!--自增长  -->
+			<generator class="native"/>
+			<!-- assigned  指定主键生成策略为手动指定主键的值 -->
+		</id>
+		
+		<!-- 非主键，映射 -->
+		<property name="name" type="string" column="name" ></property>
+		<property name="message" type="string" column="message"></property>
+		<property name="url_link" type="string" column="url_link"></property>
+		<property name="url_img" type="string" column="url_img"></property>
+		<property name="types" type="string" column="types"></property>
+		<property name="dates" type="date" column="dates"></property>
+		
+	</class>
+
+</hibernate-mapping>

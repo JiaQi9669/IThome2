@@ -1,0 +1,48 @@
+
+body{min-height: 600px;width: 100%;min-width: 1024px;background-color: #f6f5ec;
+background:url(../img/main/bk.jpg);background-size: 100% 718px;background-repeat:no-repeat ;}
+#bottom{position: relative;width: 100%;margin: 0 auto;padding:10px 0;background-color: #f6f5ec;}
+
+.imgfocus{width:100%;height:652px;padding: 50px 0 0;}
+.imgbox{width:1080px;height:600px;margin:0 auto;box-shadow: 0 1px 2px #464547;}
+.decoimg_b2{width:1080px;height:600px;float:left;display:none;overflow: hidden;}
+.decoimg_b2 img{width:100%;}
+.num_a2{width:12px;position:absolute;top:30%;right:20px;}
+.num_a2 li{width:12px;height:12px;margin-bottom:50px;position:relative;}
+.num_a2 .current{color:#4D4D4F;background-color:#4d4d4f;-webkit-transform:scale(1.8);transform:scale(1.8);}
+.num_a2 a{position:absolute;top:0;left:0;width:100%;height:100%;line-height:100%;text-indent:-70px;color:#808285;
+border-radius:50%;background-color:#808285; transition:transform 0.5s ease, background-color 0.5s ease;
+-o-transition:-moz-transform 0.5s ease, background-color 0.5s ease;-ms-transition:-moz-transform 0.5s ease, background-color 0.5s ease;
+-moz-transition:-moz-transform 0.5s ease, background-color 0.5s ease;-webkit-transition:-webkit-transform 0.5s ease, background-color 0.5s ease;}
+
+.run_wrap{position:relative;margin:30px auto;width: 960px;height:180px;background-color: #464547;border-radius: 10px;overflow: hidden;}
+.run_head{display:block;height:40px;font-size: 24px;color: #f2eada;line-height:40px;text-align: center;cursor: default;}
+.run_bar{position:absolute;height:140px;margin: 0 auto;}/*display:box;display:-webkit-box;display:-moz-box;display:-ms-flexbox;display:-webkit-flex;display:flex;*/
+.run_card{height: 132px;width:322px;margin:0 9px 8px;background-color: #f6f5ec;cursor: default;border:1px solid #0BF;}
+.card_img{width: 80px;height: 80px;margin:25px 5px;/*outline: 1px solid #000;*/}
+.card_dtl{width: 220px;height: 120px;margin:5px;/*outline: 1px solid #000;*/}
+.card_dtl a{display:block;font-size: 14px;font-weight:bold;line-height: 25px;color: #14191E;text-align: center;cursor: pointer;}
+.card_dtl a:hover{color: #0BF;}
+.card_dtl p{text-indent: 2em;font-size: 12px;color: #787D82;}
+
+.section_games{margin:30px auto;width: 960px;text-align: center;}/*background-color: #464547;border: 2px solid #0BF;border-radius: 10px;*/
+.message1 {position: relative;float: left;margin:10px 30px;width: 420px;height:150px;overflow: hidden;z-index:1;border-radius: 10px;
+background-repeat: no-repeat;background-size: 100%;background-position-x: center;}
+#mes1{background-image: url(../img/main/d91aae4bd11373f049ec4b85ac0f4bfbfaed04b5.jpg);}
+#mes2{background-image: url(../img/main/9b4ab37eca80653848fd83099fdda144ad348269.jpg);}
+#mes3{background-image: url(../img/main/bf1c40a98226cffcaf3fb7a2b1014a90f603ea66.jpg);}
+#mes4{background-image: url(../img/main/d59d52da81cb39db3dd56f46d8160924ab183065.jpg);}
+.M1,.M2,.M3,.M4{position: absolute;width:100%;height: 100px;top:120px;z-index:2;background-color:#0BF;filter:alpha(opacity:0.66);opacity: 0.66;
+transition-property:top .66s;-ms-transition:top .66s;-o-transition:top .66s;-moz-transition:top .66s;-webkit-transition:top .66s;}
+.M1 p,.M2 p,.M3 p,.M4 p{font-weight: bold;font-size: 16px;margin:5px auto;color: #14191e;}
+
+.class_wrap{width: 950px;margin: 30px auto;}
+.class_head{width: 190px;height: 440px;border: 5px solid #f6f5ec;}
+.class_name{position:relative;width: 190px;height: 110px;}
+.class_name_h3{color:#f2eada;font-size:28px;line-height: 300px;text-align:center;}
+.class_name_p{color:#f2eada;font-size:16px;line-height: 100px;text-align:center;}
+.class_name_a{position:absolute;display:block;top:0px;left:0px;width: 100%;height: 100%;border: 5px solid #f6f5ec;z-index:1;
+text-align: center;color: #f2eada;font-size: 20px;line-height: 100px;
+transition: .5s;-o-transition: .5s;-ms-transition: .5s;-moz-transition: .5s;-webkit-transition: .5s;}
+.class_name_a:hover{top:-10px;left:-10px;width: 210px;height: 130px;line-height: 120px;font-weight:bold;background-color: #0BF;z-index: 999;text-decoration: none;}
+.class_name_a:active{top:-5px;left:-5px;width: 200px;height: 120px;line-height: 110px;}

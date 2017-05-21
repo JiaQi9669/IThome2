@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!--图片映射 -->
+	<class name="com.zqrc.ITHome.homes.develop.vo.Projects" table="projects" lazy="false">
+		<!--主键 -->
+		<id name="id" column="Id" type="integer">
+			<generator class="native"></generator>
+		</id>
+		<!--普通属性 -->
+		<property name="name" type="string"></property>
+		<property name="message" type="string"></property>
+		<property name="dates" type="date"></property>
+		<property name="url_message" type="string"></property> 
+		<property name="viewCounts" type="integer"></property>
+		<property name="packNum" type="integer"></property>
+		<property name="projectstate" type="integer"></property>
+		
+		<many-to-one name="friend" lazy="false" fetch="select" class="com.zqrc.ITHome.publics.login.vo.Friends" column="pro_friend"></many-to-one>
+		
+		<set name="packages" lazy="false" inverse="true" cascade="all-delete-orphan">
+			<!--对应属性 key自定义 -->
+			<key column="pack_pro"></key>
+			<one-to-many class="com.zqrc.ITHome.homes.develop.vo.Packages"/>
+		</set>
+		
+	</class>
+
+</hibernate-mapping>

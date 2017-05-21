@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"/struts-2.3.dtd">
+
+<struts>
+<!--内部资源区Struts配置  -->
+	<package name="homes" extends="struts-default" namespace="/">
+		
+		<action name="go*" class="loginAction" method="{1}">
+			<result name="login">/WEB-INF/homes/index.jsp</result>
+			<result name="input">/WEB-INF/publics/login.jsp</result>
+			<result name="homes">/WEB-INF/homes/homes.jsp</result>
+		</action>
+		<!--登陆操作  -->
+		<action name="to*" class="loginAction" method="{1}">
+			<result name="login">/WEB-INF/homes/index.jsp</result>
+			<result name="input">/error.jsp</result>
+			<result name="exit">/WEB-INF/homes/exit.jsp</result>
+			<result name="homes">/WEB-INF/homes/homes.jsp</result>
+			
+			<result name="people">/WEB-INF/homes/admin/manage_man.jsp</result>
+			<!--王志汤添加部分  -->
+			<result name="add">/WEB-INF/homes/admin/add-personal.jsp</result>
+			<result name="addsuccess">/WEB-INF/homes/admin/manage_man.jsp</result>
+			<result name="adderror">/WEB-INF/homes/admin/add-personal.jsp</result>
+			<result name="name">/WEB-INF/homes/admin/manage_man.jsp</result>
+			<result name="my">/WEB-INF/homes/admin/manage_Person.jsp</result>
+			<result name="myupdate">/WEB-INF/homes/admin/manage_info.jsp</result>
+			<result name="peoplede">/WEB-INF/homes/admin/manage_man.jsp</result>
+			<result name="myupdatedons">/WEB-INF/homes/admin/manage_Person.jsp</result>
+			<result name="myupdatedon">/WEB-INF/homes/admin/manage_man.jsp</result>
+			<result name="updateperson">/WEB-INF/homes/admin/man_update.jsp</result>
+			<result name="updatepersons">/WEB-INF/homes/admin/manage_man.jsp</result>
+			
+		</action>
+		
+		<!--基地内部视图区  -->
+		<action name="show*" class="showAction" method="{1}">
+			<!--论坛区视图  -->
+			<result name="abouts">/WEB-INF/homes/bbs/abouts.jsp</result>
+			<result name="browse">/WEB-INF/homes/bbs/browse.jsp</result>
+			<result name="push">/WEB-INF/homes/bbs/push.jsp</result>
+		</action>
+		
+		<!-- 郭永越 -->
+		<!--项目区  -->
+		<action name="project*" class="projectAction" method="{1}">
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,jpeg</param>
+			</interceptor-ref>
+			<!--项目列表界面拦截  -->
+			<result name="subl">/WEB-INF/homes/pro/sub_list.jsp</result>
+			<!--项目列表界面查询按钮拦截  -->
+			<result name="develop">/WEB-INF/homes/pro/sub_list.jsp</result>		
+			
+			<!--管理端项目界面  -->
+			<result name="listpro">/WEB-INF/homes/admin/project_list.jsp</result>
+			<!--管理端项目界面  -->
+			<result name="lista">/WEB-INF/homes/admin/project_list.jsp</result>			
+			
+			<!--项目列表详情界面  -->		
+			<result name="introduce">/WEB-INF/homes/pro/sub_introduce.jsp</result>
+			<!--項项目列表加入界面  -->
+			<result name="modelintroduce">/WEB-INF/homes/pro/sub_model_introduce.jsp</result>
+			<!--项目上传界面  -->	
+			<result name="upload">/WEB-INF/homes/pro/personal_release_upload.jsp</result>
+			<!-- 模块上传界面 -->			
+			<result name="upload2">/WEB-INF/homes/pro/personal_release_upload2.jsp</result>			
+			
+			<result name="model">/WEB-INF/homes/pro/projectmodel.jsp</result>	
+			<!-- 退出按钮 -->
+			<result name="quit">/WEB-INF/homes/pro/delete_model.jsp</result>	
+			<!--push_project  -->
+			<!--发布项目界面拦截  -->
+			<result name="release">/WEB-INF/homes/pro/push_project.jsp</result>
+			
+			<!--我发布的项目发布项目界面拦截  -->
+			<result name="person">/WEB-INF/homes/pro/personal_release.jsp</result>
+			<!--我参与的项目发布项目界面拦截  -->
+			<result name="join">/WEB-INF/homes/pro/join_project.jsp</result>
+			
+			<!-- 板块列表 -->
+			<result name="list">/WEB-INF/homes/pro/packages_list.jsp</result>
+			
+			<!--错误  -->
+			<result name="input">/error.jsp</result>
+			<!-- 下载操作 -->
+			<result name="download" type="stream">
+				<!-- 运行下载的文件的类型:指定为所有的二进制文件类型 -->
+			   <param name="contentType">application/octet-stream</param>
+			   <!-- 对应的是Action中属性： 返回流的属性【其实就是getAttrInputStream()】 -->
+			   <param name="inputName">attrInputStream</param>
+			   <!-- 下载头，包括：浏览器显示的文件名 -->
+			   <param name="contentDisposition">attachment;filename=${downFileName}</param>
+			 	<!-- 缓冲区大小设置 -->
+			   <param name="bufferSize">1024</param>
+			</result>
+		</action>
+		
+		<!-- 郭永越 -->
+		<action name="package*" class="packageAction" method="{1}">
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,jpeg</param>
+			</interceptor-ref>
+			
+			<!-- 板块列表 -->
+			<result name="list">/WEB-INF/homes/pro/file_list.jsp</result>
+			
+			<!-- 添加板块视图 -->
+			<result name="addview">/WEB-INF/homes/pro/package_add.jsp</result>
+			
+			<!-- 添加板块成功 -->
+			<result name="develop">/WEB-INF/homes/pro/upsuc.jsp</result>
+			
+			<!-- 上传文件界面 -->
+			<result name="uploads">/WEB-INF/homes/pro/file_upload.jsp</result>
+			
+			<!--发布项目界面查询拦截  -->
+			<result name="relese">/WEB-INF/homes/pro/push_project.jsp</result>
+			
+			<!--我参与的项目发布项目界面拦截  -->
+			<result name="join">/WEB-INF/homes/pro/join_project.jsp</result>
+			
+			<!-- 下载操作 -->
+			<result name="download" type="stream">
+				<!-- 运行下载的文件的类型:指定为所有的二进制文件类型 -->
+			   <param name="contentType">application/octet-stream</param>
+			   <!-- 对应的是Action中属性： 返回流的属性【其实就是getAttrInputStream()】 -->
+			   <param name="inputName">attrInputStream</param>
+			   <!-- 下载头，包括：浏览器显示的文件名 -->
+			   <param name="contentDisposition">attachment;filename=${downFileName}</param>
+			 	<!-- 缓冲区大小设置 -->
+			   <param name="bufferSize">10240</param>
+			</result>
+		</action>
+		
+		
+		<!-- 郭永越 -->
+		<action name="file*" class="fileAction" method="{1}">
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">txt,docx,doc,zip,rar,jpg,png,jpeg</param>
+			</interceptor-ref>
+			
+			<!-- 上传文件界面 -->
+			<result name="uploads">/WEB-INF/homes/pro/upsuc.jsp</result>
+			
+			<!-- 板块列表 -->
+			<result name="list">/WEB-INF/homes/pro/file_list.jsp</result>
+			
+			<!-- 下载操作 -->
+			<result name="download" type="stream">
+				<!-- 运行下载的文件的类型:指定为所有的二进制文件类型 -->
+			   <param name="contentType">application/octet-stream</param>
+			   <!-- 对应的是Action中属性： 返回流的属性【其实就是getAttrInputStream()】 -->
+			   <param name="inputName">attrInputStream</param>
+			   <!-- 下载头，包括：浏览器显示的文件名 -->
+			   <param name="contentDisposition">attachment;filename=${downFileName}</param>
+			 	<!-- 缓冲区大小设置 -->
+			   <param name="bufferSize">10240</param>
+			</result>
+		</action>
+		<!-- 郭永越结束标签 -->
+		
+		
+		<!--资源区相关请求  -->
+		<action name="class*" class="classAction" method="{1}">
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,jpeg</param>
+			</interceptor-ref>
+			
+			<result name="view">/WEB-INF/homes/res/Resource.jsp</result>
+			<result name="input">/error.jsp</result>
+			
+			<result name="data">/test/data.jsp</result>
+		</action>
+		
+		<!--资源  -->
+		<action name="data*" class="dataAction" method="{1}">
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,jpeg,rar,zip,mp4,avi,doc,docx,txt,xlsx</param>
+			</interceptor-ref>
+			<!--贾启*********************************  -->
+			<!-- 视图 -->
+			<result name="view">/WEB-INF/homes/res/Resource.jsp</result>
+			<!-- dataintroduce 详细信息 -->
+			<result name="introduce">/WEB-INF/homes/res/resource_introduce.jsp</result>
+			<!-- dataupload 上传 -->
+			<result name="upload">/WEB-INF/homes/res/T-upload.jsp</result>
+			<!--native ******************************* -->
+			<result name="list">/WEB-INF/homes/admin/datas.jsp</result>
+			<result name="data">/test/data.jsp</result>
+			<result name="input">/error.jsp</result>
+			
+			<!-- 下载操作 -->
+			<result name="download" type="stream">
+				<!-- 运行下载的文件的类型:指定为所有的二进制文件类型 -->
+			   <param name="contentType">application/octet-stream</param>
+			   <!-- 对应的是Action中属性： 返回流的属性【其实就是getAttrInputStream()】 -->
+			   <param name="inputName">attrInputStream</param>
+			   <!-- 下载头，包括：浏览器显示的文件名 -->
+			   <param name="contentDisposition">attachment;filename=${downFileName}</param>
+			 	<!-- 缓冲区大小设置 -->
+			   <param name="bufferSize">1024</param>
+			</result>
+		</action>
+		
+		<!--板块  -->
+		<action name="board*" class="boardAction" method="{1}">
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,jpeg</param>
+			</interceptor-ref>
+			
+			<!-- 针对性板块的贴子查询 -->
+			<result name="viewpost">/WEB-INF/homes/bbs/postList.jsp</result>
+			
+			<result name="view">/WEB-INF/homes/bbs/browse.jsp</result>
+			<result name="list">/WEB-INF/homes/admin/bbs.jsp</result>
+			<result name="talk">/test/talk.jsp</result>
+			<result name="input">/test/talk.jsp</result>
+		</action>
+		
+		<!--贴子  -->
+		<action name="post*" class="postAction" method="{1}">
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,jpeg</param>
+			</interceptor-ref>
+			<!--与我相关  -->
+			<result name="about">/WEB-INF/homes/bbs/aboutMe.jsp</result>
+			<!--我的贴子  -->
+			<result name="me">/WEB-INF/homes/bbs/postMe.jsp</result>
+			<!--查看帖子  -->
+			<result name="viewpost">/WEB-INF/homes/bbs/postview.jsp</result>
+			
+			
+			<!--发布问题  -->
+			<result name="pushview">/WEB-INF/homes/bbs/pushCard.jsp</result>
+			<!--发布成功 -->
+			<result name="push">/WEB-INF/homes/bbs/pushCard.jsp</result>
+			
+			<result name="list">/WEB-INF/homes/admin/bbs_post.jsp</result>
+			<!--查看帖子管理员  -->
+			<result name="view">/WEB-INF/homes/admin/bbs_view.jsp</result>
+			<result name="talk">/test/talk.jsp</result>
+			<result name="input">/test/talk.jsp</result>
+		</action>
+		
+		<!--回复  -->
+		<action name="reply*" class="replyAction" method="{1}">
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,jpeg</param>
+			</interceptor-ref>
+			<result name="suc">/WEB-INF/homes/bbs/temp.jsp</result>
+			<result name="talk">/WEB-INF/homes/admin/bbs_view.jsp</result>
+			<result name="input">/test/talk.jsp</result>
+		</action>
+		
+		<!--模块测试*****************************************************  -->
+		<!--用户登陆请求相关  -->
+		<action name="loginAction_*" class="loginAction" method="{1}">
+			<!--上传图片拦截器  -->
+			<interceptor-ref name="defaultStack">
+				<param name="fileUpload.allowedExtensions">jpg,png,jpeg</param>
+			</interceptor-ref>
+			
+			<result name="login">/test/login.jsp</result>
+			<result name="input">/test/login.jsp</result>
+		</action>
+		
+	</package>
+
+</struts>

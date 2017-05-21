@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!--图片映射 -->
+	<class name="com.zqrc.ITHome.homes.develop.vo.Files" table="files" lazy="false">
+		<!--主键 -->
+		<id name="id" column="Id" type="integer">
+			<generator class="native"></generator>
+		</id>
+		<!--普通属性 -->
+		<property name="name" type="string"></property>
+		<property name="message" type="string"></property>
+		<property name="dates" type="date"></property>
+		<property name="url_message" type="string"></property>
+		<many-to-one name="friends" lazy="false" fetch="select" class="com.zqrc.ITHome.publics.login.vo.Friends" column="file_fri"></many-to-one>
+		<many-to-one name="fpackage"  lazy="false" fetch="select" class="com.zqrc.ITHome.homes.develop.vo.Packages" column="file_packs"></many-to-one>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.zqrc.ITHome.homes.talks.vo.Boards" table="boards" lazy="false">
+        <id name="id" type="integer">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="string"></property>
+        <property name="message" type="string"></property>
+        <property name="url_img" type="string"></property>
+        <property name="boardType" type="integer"></property>
+        
+        <set name="posts" lazy="false" inverse="true">
+            <key>
+                <column name="post_board" />
+            </key>
+            <one-to-many class="com.zqrc.ITHome.homes.talks.vo.Posts" />
+        </set>
+    </class>
+</hibernate-mapping>

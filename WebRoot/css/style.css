@@ -1,0 +1,160 @@
+
+body{
+	min-height: 600px;
+	min-width: 1024px;
+	background: url(../img/beijing/0.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center;
+}
+
+#bottom{background-color:rgba(70,70,70,0.6); overflow: hidden;}
+
+.slid{
+	animation: myslide 1.5s forwards; 
+	-ms-animation: myslide 1.5s forwards;
+	-moz-animation: myslide 1.5s forwards;
+	-webkit-animation: myslide 1.5s forwards;
+	-o-animation: myslide 1.5s forwards;
+}
+.slidr{
+	animation: myslider 1.5s forwards; 
+	-ms-animation: myslider 1.5s forwards;
+	-moz-animation: myslider 1.5s forwards;
+	-webkit-animation: myslider 1.5s forwards;
+	-o-animation: myslider 1.5s forwards;
+}
+.view1,.view2{position: relative;height: 210px;margin:20px;border: 3px solid #0BF;border-radius: 10px;background: #464547; overflow: hidden;}
+.view1{left: -920px;}
+.view2{right: -920px;}
+.pic{margin:2px 10px;width: 300px;height: 200px;}
+.text{margin:20px 10px;}
+.view1 img,.view2 img{width: 100%;height: 100%;border-radius: 10px;}
+.introduce{font-size: 30px;width: 204px;height: 204px;text-align: center;line-height: 204px;}
+.introduce span{color:#0BF;cursor: default;}
+.text p{width: 300px;font-size: 15px;color:#f6f5ec;text-indent: 2em;
+	text-align: justify; 
+	text-justify: distribute; 
+	text-justify: inter-ideograph;/* IE 私有属性 */
+}
+
+/*BOX*/
+.threedbox{width: 100%;background-color:#f6f5ec;}
+.space{
+	perspective:1000px;
+	-o-perspective:1000px;
+	-ms-perspective:1000px;
+	-moz-perspective:1000px;
+    -webkit-perspective:1000px;
+    perspective-origin:50% 50%;
+    -o-perspective-origin:50% 50%;
+    -ms-perspective-origin:50% 50%;
+    -moz-perspective-origin:50% 50%;
+    -webkit-perspective-origin:50% 50%;
+    overflow:hidden;
+}
+.bone{
+    position:relative;
+    width:700px;
+    height:700px;
+    margin:0 auto;
+    transform-style:preserve-3d;
+    -o-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    -moztransform-style:preserve-3d;
+    -webkit-transform-style:preserve-3d;
+    transform:rotateY(30deg) translateZ(-30px);
+    -o-transform:rotateY(30deg) translateZ(-30px);
+    -ms-transform:rotateY(30deg) translateZ(-30px);
+    -moz-transform:rotateY(30deg) translateZ(-30px);
+    -webkit-transform:rotateY(30deg) translateZ(-30px);
+}
+.mian{
+    position:absolute;
+    width:400px;
+    height:400px;
+    margin:150px;
+    border: 1px solid #f6f5ec;
+    box-sizing: border-box;
+    cursor: pointer;
+    
+    background-color:rgba(70,70,70,.1);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /*字体
+    background:#0BF;
+    color:#FFF;
+    font-weight:bold;
+    font-size:200px;
+    line-height:380px;
+    text-align:center;*/
+}
+/*.mian:hover{background:#FBF;}*/
+#mian1{
+	background-image: url(../img/Introduce/family.jpg);
+	transform: rotateY(0deg) translateZ(200px);
+	-o-transform: rotateY(0deg) translateZ(200px);
+	-ms-transform: rotateY(0deg) translateZ(200px);
+	-moz-transform: rotateY(0deg) translateZ(200px);
+	-webkit-transform:rotateY(0deg) translateZ(200px);
+}
+#mian2{
+	background-image: url(../img/Introduce/bisai.jpg);
+	transform:rotateX(90deg) translateZ(200px);
+	-o-transform:rotateX(90deg) translateZ(200px);
+	-ms-transform:rotateX(90deg) translateZ(200px);
+	-moz-transform:rotateX(90deg) translateZ(200px);
+	-webkit-transform:rotateX(90deg) translateZ(200px);
+}
+#mian3{
+	background-image: url(../img/main/psb9.jpg);
+	transform:rotateY(90deg) translateZ(200px);
+	-o-transform:rotateY(90deg) translateZ(200px);
+	-ms-transform:rotateY(90deg) translateZ(200px);
+	-moz-transform:rotateY(90deg) translateZ(200px);
+	-webkit-transform:rotateY(90deg) translateZ(200px);
+}
+#mian4{
+	background-image: url(../img/beijing/7.jpg);
+	transform:rotateX(-90deg) translateZ(200px);
+	-o-transform:rotateX(-90deg) translateZ(200px);
+	-ms-transform:rotateX(-90deg) translateZ(200px);
+	-moz-transform:rotateX(-90deg) translateZ(200px);
+	-webkit-transform:rotateX(-90deg) translateZ(200px);
+}
+#mian5{
+	background-image: url(../img/Introduce/bisai1.jpg);
+	transform:rotateY(-90deg) translateZ(200px);
+	-o-transform:rotateY(-90deg) translateZ(200px);
+	-ms-transform:rotateY(-90deg) translateZ(200px);
+	-moz-transform:rotateY(-90deg) translateZ(200px);
+	-webkit-transform:rotateY(-90deg) translateZ(200px);
+}
+#mian6{
+	background-image: url(../img/log.jpg);
+	transform:rotateY(180deg) translateZ(200px);
+	-o-transform:rotateY(180deg) translateZ(200px);
+	-ms-transform:rotateY(180deg) translateZ(200px);
+	-moz-transform:rotateY(180deg) translateZ(200px);
+	-webkit-transform:rotateY(180deg) translateZ(200px);
+}
+.bar{
+	position:absolute;
+    width:400px;
+    height:400px;
+    background: transparent;
+}
+.mian:hover .bar{background: rgba(255,255,255,0.2);}
+/*end BOX*/
+
+/*css动画*/
+@keyframes myslide{
+	from{left: -920px;}
+	to{left: 0px;}
+}
+@keyframes myslider{
+	from{right: -920px;}
+	to{right: 0px;}
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<!--图片映射 -->
+	<class name="com.zqrc.ITHome.homes.develop.vo.Packages" table="packages" lazy="false">
+		<!--主键 -->
+		<id name="id" column="Id" type="integer">
+			<generator class="native"></generator>
+		</id>
+		<!--普通属性 -->
+		<property name="name" type="string"></property>
+		<property name="message" type="string"></property>
+		<property name="dates" type="date"></property>
+		<property name="url_message" type="string"></property>
+		<property name="packNum" type="integer"></property>
+		
+		<many-to-one name="projects" lazy="false" fetch="select" class="com.zqrc.ITHome.homes.develop.vo.Projects" column="pack_pro"></many-to-one>
+		
+		<many-to-one name="friends" lazy="false" fetch="select" class="com.zqrc.ITHome.publics.login.vo.Friends" column="pack_fri"></many-to-one>
+		
+		<many-to-one name="fpackage" lazy="false" fetch="select" class="com.zqrc.ITHome.homes.develop.vo.Packages" column="fpack_packs"></many-to-one>
+		
+		<set name="packages" lazy="false" cascade="all" inverse="true">
+			<!--对应属性 key自定义 -->
+			<key column="fpack_packs"></key>
+			<one-to-many class="com.zqrc.ITHome.homes.develop.vo.Packages"/>
+		</set>
+		
+		<set name="files" lazy="false" inverse="true">
+			<!--对应属性 key自定义 -->
+			<key column="file_packs"></key>
+			<one-to-many class="com.zqrc.ITHome.homes.develop.vo.Files"/>
+		</set>
+		
+	</class>
+
+</hibernate-mapping>
